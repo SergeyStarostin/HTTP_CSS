@@ -1,0 +1,40 @@
+5) Используя онлайн редактор https://onecompiler.com/mysql/3zc3xem9e
+создайте базу данных, состоящую из одной таблицы - информация об участниках группы.
+В таблице должны быть 3 столбца: ID, NAME, AGE. Выведите всех студентов, старше 18 лет.
+-->
+-- create
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (0001, 'Егор', 45);
+INSERT INTO EMPLOYEE VALUES (0002, 'Давид', 20);
+INSERT INTO EMPLOYEE VALUES (0003, 'Анна', 17);
+
+-- fetch 
+SELECT * FROM EMPLOYEE WHERE age > 18;
+
+--------------------------------------------------------------------------------------
+ДЗ Задача №2: 
+создать БД, состоящую из одной таблицы (информация об одногруппниках) с четырьмя полями 
+(добавить поле «Адрес»): id, name, age, address.
+
+-- create
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL,
+  address TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (0001, 'Егор', 21, 'Самара, ул. Мира, 8');
+INSERT INTO EMPLOYEE VALUES (0002, 'Давид', 20, 'Тольятти, ул. Победы, 6');
+INSERT INTO EMPLOYEE VALUES (0003, 'Анна', 17, 'Самара, ул. Л.Толстого, 11');
+INSERT INTO EMPLOYEE VALUES (0004, 'Алла', 22, 'Томск, ул. Кирова, 1');
+
+-- fetch 
+SELECT * FROM EMPLOYEE;
